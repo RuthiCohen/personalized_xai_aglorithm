@@ -35,11 +35,13 @@ This experiment involves creating reasoning data using the **DCNet** model, adap
 The model is trained and evaluated on the **RAVEN-10k** dataset, which can be downloaded from:  
 🔗 https://wellyzhang.github.io/project/raven.html#dataset  
 > Click on the **Google Drive link** to download the dataset and place it in the appropriate directory.
+> Place the RAVEN-10k in a directory: `experiment_2/dataset/RAVEN-10000`
 
 ### 📂 Important Files
 - `generate_data.py` – Creates a folder containing visual reasoning puzzles and runs different explanation methods on them.
 - `main.py` – Demonstrates example explanations for a selected Raven matrix.
-- `train.py` – Trains the DCNet model across multiple folds.
+- `train.py` – Trains the DCNet model across multiple folds.(DCnet repository)
+- `test.py` – Test the DCNet models and returns the accuracy results. (DCnet repository)
 
 ### 📊 Output
 - Training will result in **30 saved models**.
