@@ -1,15 +1,15 @@
 # Personalized XAI Algorithm – Experiments Overview
 
-This repository contains two experiments focused on generating data and applying explainability techniques using different neural network architectures and datasets.
+This repository contains two experiments focused on generating data and applying explainability techniques using neural networks and symbolic reasoning datasets.
 
 ---
 
 ## 🧪 Experiment 1: EMNIST Alphabet with CNN
 
-This experiment involves generating classification data using a Convolutional Neural Network (CNN) trained on the EMNIST alphabet dataset.
+This experiment involves generating data using a Convolutional Neural Network (CNN) trained on the EMNIST alphabet dataset.
 
 ### 📥 Dataset
-To run this experiment, download the following files from the [EMNIST Kaggle page](https://www.kaggle.com/datasets/crawford/emnist):
+To run the experiment, download the following files from the [EMNIST Kaggle page](https://www.kaggle.com/datasets/crawford/emnist):
 
 - `emnist-letters-train.csv`
 - `emnist-letters-test.csv`
@@ -17,25 +17,33 @@ To run this experiment, download the following files from the [EMNIST Kaggle pag
 Place both files inside the `experiment 1/` directory.
 
 ### 📂 Important File
-- `eminst.ipynb` – Jupyter notebook for generating and analyzing the EMNIST data.
+- `eminst.ipynb` – Jupyter notebook for creating training data and generating explanations.
+
+### 📊 Output
+- After running the notebook, a model file `emnist_model.keras` will be generated with a final accuracy of **83.23%**.
+- The notebook includes the implementation of **two types of explanations** for model predictions.
 
 ---
 
 ## 🧠 Experiment 2: Raven-10k with DCNet
 
-This experiment involves generating reasoning data using the DCNet model for abstract visual pattern understanding.  
-The model implementation is adapted from the official DCNet repository:  
+This experiment involves creating reasoning data using the **DCNet** model, adapted from the original repository:  
 🔗 https://github.com/visiontao/dcnet/tree/main
 
 ### 📥 Dataset
-Download the **RAVEN-10k dataset** from the following page:  
+The model is trained and evaluated on the **RAVEN-10k** dataset, which can be downloaded from:  
 🔗 https://wellyzhang.github.io/project/raven.html#dataset  
-Then click on the **Google Drive link**, and place the dataset in the appropriate directory.
+> Click on the **Google Drive link** to download the dataset and place it in the appropriate directory.
 
 ### 📂 Important Files
-- `generate_data.py` – Generates image folders of Raven-style matrix puzzles and runs various explanation types.
-- `main.py` – Demonstrates an example explanation flow on a Raven puzzle instance.
+- `generate_data.py` – Creates a folder containing visual reasoning puzzles and runs different explanation methods on them.
+- `main.py` – Demonstrates example explanations for a selected Raven matrix.
+- `train.py` – Trains the DCNet model across multiple folds.
+
+### 📊 Output
+- Training will result in **30 saved models**.
+- The selected model used for explanations in this repository is `model_02.pth`, which achieved an accuracy of **87.914%**.
 
 ---
 
-Feel free to open an issue or contribute if you'd like to extend these experiments or apply alternative XAI methods.
+Feel free to open an issue or contribute if you're interested in extending the experiments or testing alternative explainability methods.
