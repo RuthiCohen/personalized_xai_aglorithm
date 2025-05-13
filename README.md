@@ -49,6 +49,9 @@ Each of the above (`9_errors` and `15_correct`) contains:
 This experiment involves creating reasoning data using the **DCNet** model, adapted from the original repository:  
 🔗 https://github.com/visiontao/dcnet/tree/main
 
+> **Note:** The required DCNet model files have already been included in this repository.  
+> There is **no need to download them again** from the original source.
+
 ### 📥 Dataset
 The model is trained and evaluated on the **RAVEN-10k** dataset, which can be downloaded from:  
 🔗 https://wellyzhang.github.io/project/raven.html#dataset  
