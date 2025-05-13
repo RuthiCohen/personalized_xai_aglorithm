@@ -21,6 +21,7 @@ Place both files inside the `experiment 1/` directory.
 
 ### 📊 Output
 - After running the notebook, a model file `emnist_model.keras` will be generated with a final accuracy of **83.23%**.
+  (the trained model is in the "trained_models/emnist_model.keras")
 - The notebook includes the implementation of **two types of explanations** for model predictions.
 
 ---
