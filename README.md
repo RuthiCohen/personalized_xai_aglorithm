@@ -51,6 +51,7 @@ This experiment involves creating reasoning data using the **DCNet** model, adap
 
 > **Note:** The required DCNet model files have already been included in this repository.  
 > There is **no need to download them again** from the original source.
+> We run this code to create images of 640x640.
 
 ### 📥 Dataset
 The model is trained and evaluated on the **RAVEN-10k** dataset, which can be downloaded from:  
@@ -66,19 +67,18 @@ The model is trained and evaluated on the **RAVEN-10k** dataset, which can be do
 
 ### 📊 Output
 - Training will result in **30 saved models**.
-- The selected model used for explanations in this repository is `model_02.pth`, which achieved an accuracy of **87.914%**.
+- The selected model used for explanations in this repository is `model_new_04.pth`, which achieved an accuracy of **~88%**.
 
 ### 🗂️ Explanations Output Folder Structure
 
 Inside the `experiment_2/experiment_images/` directory, you’ll find:
 
-- `LLM/`: Contains images shown in the experiment with **LLM-generated explanations**.
-  - `correct/`: Examples where the LLM gave the correct answer.
-  - `wrong/`: Examples where the LLM gave the wrong answer.
-  - Inside each, folders are grouped by **RAVEN dataset category** (e.g., `center_single`) and then by question ID (e.g., `8558`).
+- `Images/`: Contains images shown in the experiment with **LLM-generated explanations** and **Occlustion sensitivity explanations**.
+  - `OS_{example_id}/`: Examples where the OS provided the answer.
+  - `LLM_{example_id}/`: Examples where the LLM provided the answer.
+  - Inside each, there are 2 folders: `matrix` and `choices` both for keeping the matrix and the choices images. inside the OS folders there are 2 more folders for `OS_matrix` and `OS_choices`.
 
-- `occlusion_sensitivity/`: Same structure as `LLM/`, but with **DCNet predictions and occlusion-based explanations**.
-- `llm explanations vs.xlsx`: A spreadsheet comparing actual vs. predicted answers from both the LLM and the occlusion sensitivity method.
+- `predictions.png`: A table comparing actual vs. predicted answers from both the LLM and the occlusion sensitivity method.
 ---
 
 Feel free to open an issue or contribute if you're interested in extending the experiments or testing alternative explainability methods.
