@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# IDE
+.idea/
+
 # Python
 __pycache__/
 *.pyc
@@ -10,4 +13,3 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
-
